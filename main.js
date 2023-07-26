@@ -168,18 +168,7 @@ function gameOver() {
   result.appendChild(span);
   // Create Replay Button
   replayBtn();
-  document.querySelector(".video").style.display = "block";
-  document
-    .querySelector(".video")
-    .requestFullscreen()
-    .then(() => {
-      document.querySelector(".video").play();
-    })
-    .catch((err) => {
-      alert(
-        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
-      );
-    });
+  showFullscreenBtn();
 }
 // Create Gratz Span
 function createGratz() {
@@ -201,5 +190,26 @@ function replayBtn() {
   result.appendChild(button);
   button.addEventListener("click", (e) => {
     location.reload();
+  });
+}
+
+function showFullscreenBtn() {
+  let button = document.createElement("span");
+  button.classList.add("replay");
+  button.innerHTML = "خد جايزتك يا نجم";
+  result.appendChild(button);
+  button.addEventListener("click", (e) => {
+    document.querySelector(".video").style.display = "block";
+    document
+      .querySelector(".video")
+      .requestFullscreen()
+      .then(() => {
+        document.querySelector(".video").play();
+      })
+      .catch((err) => {
+        alert(
+          `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
+        );
+      });
   });
 }
