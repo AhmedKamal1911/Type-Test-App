@@ -180,6 +180,7 @@ function createGratz() {
   result.appendChild(span);
   // Create Replay Button
   replayBtn();
+  showFullscreenBtn();
 }
 
 //Create Replay button
