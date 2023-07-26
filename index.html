@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="master.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title"><h2>type speed test game</h2></div>
+      <div class="message">
+        You Are Playing On
+        <span class="lvl"></span> Level & You Have
+        <span class="seconds"></span> Seconds To Type The Word
+      </div>
+      <button class="start">Start Playing</button>
+      <div class="the-word"></div>
+      <input type="text" name="" id="" class="input" />
+      <div class="upcoming-words"></div>
+      <div class="info">
+        <div class="time">
+          Time left : <span class="count-down"></span> Seconds
+        </div>
+        <div class="score">
+          Score : <span class="got"></span> From <span class="total"></span>
+        </div>
+      </div>
+      <div class="finish"></div>
+      <select class="difficulty">
+        <option value="Easy">Easy</option>
+        <option value="Normal">Normal</option>
+        <option value="Hard">Hard</option>
+      </select>
+      <div class="game-info">
+        <h2>Game Rules</h2>
+        <p class="desc">
+          You have to type fast to earn the most points and thus you can
+          determine how fast you type
+        </p>
+        <div class="rules">
+          <div class="level-rule">
+            Level Difficulty : <span class="lvl-difficulty"></span>
+          </div>
+          <div class="level-time">
+            Level Time : <span class="time-difficulty"></span> Second
+          </div>
+        </div>
+      </div>
+    </div>
+    <video autoplay class="video" width="320" height="240">
+      <source src="./video.mp4" type="video/mp4" />
+    </video>
+    <script src="main.js"></script>
+  </body>
+</html>
